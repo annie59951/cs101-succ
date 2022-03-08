@@ -70,7 +70,7 @@ int main()
         fprintf(fp,"== == == == == == ==\n");
     }   
     
-    fprintf(fp,"========================\n");
+    fprintf(fp,"========= csie@CGU =======\n");
     
     
     fclose(fp);
