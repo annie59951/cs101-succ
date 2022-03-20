@@ -18,13 +18,18 @@ int ask_imfor() {
     flag = 0;
     printf("請輸入operator id:");
     scanf("%d",&inputid);
-    printf("請問要購買幾組樂透(請輸入1~5的數字):");
-    scanf("%d",&lotto);
-    
     if(inputid == 0) {
         flag = 1;
         get_new_emp_records();
     }
+    if(inputid!=0) {
+        printf("請問要購買幾組樂透(請輸入1~5的數字):");
+        scanf("%d",&lotto);
+        printf("已將您購買的彩卷輸入至lotto.txt");
+    }
+    
+    
+    
     
 }
 void now() {
