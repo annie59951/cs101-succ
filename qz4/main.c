@@ -10,12 +10,12 @@ int count=0;
 
 int hanoi(int layer, char A, char B, char C) {
     if(layer == 1) {
-        fprintf(fp,"Move disk %d from %c to %c\n",count+1, A, C);
+        fprintf(fp,"Move disk %d from %c to %c\n",layer, A, C);
         count++;
     }
     else {
         hanoi(layer-1, A, C, B);//把上面的搬走
-        hanoi(1, A, B, C);//搬走底部
+        fprintf(fp,"Move disk %d from %c to %c\n",layer, A, C);
         hanoi(layer-1, B, A, C);//把該在上面的搬回來
     }
     return count;
@@ -40,6 +40,7 @@ int main()
     printf("\nfunc#1----------------------------------------------------------------\n");
     fp = fopen("hanoi.txt","w+");
     hanoi(16,'A','B','C');
+    fclose(fp);
     printf("\nfunc#2------請見hanoi.txt---------------------------------------------\n");
     multiplication(1,1);
     printf("\nfunc#3----------------------------------------------------------------\n");
